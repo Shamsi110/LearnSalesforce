@@ -1,0 +1,15 @@
+<apex:page controller="accountTaskController">
+<apex:form >
+<apex:pageBlock >
+<apex:commandButton action="{!getListOfTasks}" value="Show Tasks"/>
+</apex:pageBlock>
+ <apex:pageBlock title="Tasks for Account">
+ <apex:pageBlockTable value="{!AccountTasks}" var="task">
+ <apex:column value="{!task.Id}"/>
+ <apex:column value="{!task.subject}"/>
+ <apex:column value="{!task.CreatedDate}"/>
+ </apex:pageBlockTable>
+ </apex:pageBlock>
+ 
+ </apex:form>
+</apex:page>

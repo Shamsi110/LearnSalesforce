@@ -1,0 +1,12 @@
+<apex:page controller="learnPopertiesController">
+  <apex:form >
+    <apex:outputlabel value="Enter your Name :"/>
+       <apex:inputtext value="{!Name}"/> 
+       <apex:actionSupport event="OnChange" reRender="output" immediate="true"/>
+      
+      <apex:outputPanel id="output">
+      <apex:outputText value="{!Name}">
+      </apex:outputText>
+      </apex:outputPanel>
+  </apex:form>    
+</apex:page>
